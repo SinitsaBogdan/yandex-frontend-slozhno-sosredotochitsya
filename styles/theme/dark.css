@@ -1,8 +1,4 @@
-:root {
-	--global-width: 1024px;
-	--global-font: 'IBM Plex mono';
-	--global-font-size: 18px;
-
+.page.theme_dark {
 	--color-background: #000028;
 	--color-shadow: #ff0070;
 	--color-shadow-link: #ff0070;

@@ -1,5 +1,226 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	block-size: 100vh;
+	inline-size: 100%;
+}
 
-.page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+.decorated_corner::after {
+	right: 20px;
+	top: 20px;
+}
+
+.decorated_corner::before {
+	left: 20px;
+	bottom: 20px;
+}
+
+.header__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 75px;
+	block-size: 100%;
+	inline-size: 100%;
+}
+
+.header__title {
+	margin-block-start: 16vh;
+}
+
+.header__text {
+	align-self: end;
+	margin-inline-end: 20px;
+	inline-size: 491px;
+}
+
+.header__img {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	object-fit: cover;
+	object-position: center;
+	inline-size: 100%;
+	block-size: 100%;
+}
+
+.header__theme-menu-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.header__theme-menu-button {
+	border: 1px solid transparent;
+	padding: 1px 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-decor);
+	font-size: inherit;
+	text-transform: lowercase;
+	background-color: transparent;
+}
+
+.header__theme-menu-button:hover {
+	border: 1px solid var(--color-decor-40);
+}
+
+.header__theme-menu-button:focus {
+	border: 1px solid transparent;
+	outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+	border-bottom: 1px solid var(--color-decor);
+}
+
+.header__theme-menu-button_active {
+	border: 1px solid var(--color-decor);
+	pointer-events: none;
+}
+
+/* ------------------------------------------------- */
+
+.content_block {
+	display: grid;
+	grid-template-columns: minmax(236px, 314px) auto;
+	grid-gap: 20px;
+}
+
+.content_block__list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+.content_block__row .content_block__title {
+	inline-size: 315px;
+}
+
+.content_block__row .content_block__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.content_block__title {
+	margin-block-end: 20px;
+	color: var(--color-accent);
+	font-size: inherit;
+}
+
+.content_block__list_title {
+	margin-block-end: 20px;
+	font-size: var(--global-font-size);
+	color: var(--color-title);
+}
+
+.article__title,
+.galery__title {
+	margin-block-end: 8px;
+	font-size: var(--global-font-size);
+	line-height: 24px;
+}
+
+.article__text {
+	color: var(--color-text);
+	font-size: var(--global-font-size);
+	line-height: 23.6px;
+}
+
+.galery__list {
+	display: grid;
+	block-size: minmax(780px, 1048px);
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: minmax(192px, 260px) minmax(230px, 315px) minmax(318px, 428px);
+	grid-template-areas:
+		'AAA AAA BBB'
+		'CCC RRR BBB'
+		'CCC VVV VVV';
+	gap: 20px;
+	margin-block-start: 20px;
+}
+
+.galery__list li:nth-child(1) {
+	grid-area: AAA;
+}
+
+.galery__list li:nth-child(2) {
+	grid-area: BBB;
+}
+
+.galery__list li:nth-child(3) {
+	grid-area: CCC;
+}
+
+.galery__list li:nth-child(4) {
+	grid-area: RRR;
+}
+
+.galery__list li:nth-child(5) {
+	grid-area: VVV;
+}
+
+/* ------------------------------------------------- */
+
+.footer {
+	display: grid;
+	grid-template-rows: 1fr;
+	justify-content: center;
+	align-items: center;
+	block-size: 100vh;
+}
+
+/* ------------------------------------------------- */
+
+@media (width <= 1024px) {
+}
+
+@media (width <= 768px) {
+	.header__theme-menu-list {
+		position: absolute;
+		flex-direction: column;
+		right: 20px;
+		top: 190px;
+	}
+	.header__title {
+		margin-block-start: 24vh;
+	}
+	.header__text {
+		margin-block-start: 5.8vh;
+		inline-size: 364px;
+	}
+	.content_block__row .content_block__list {
+		grid-template-rows: auto;
+		grid-template-columns: 1fr;
+	}
+	.content_block__row .content_block__title {
+		inline-size: 236px;
+	}
+	.footer .title {
+		margin-block-start: 0;
+	}
+}
+
+@media (width <= 375px) {
+	.header__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		margin-block-end: 12vh;
+	}
+	.header__title {
+		margin-block-end: 8vh;
+		line-height: 0.8;
+	}
+	.galery__list {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
 }
