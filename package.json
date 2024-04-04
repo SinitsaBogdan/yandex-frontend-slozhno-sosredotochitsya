@@ -1,0 +1,58 @@
+{
+	"name": "slozhno-sosredotochitsya",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"load-library": "npm install prettier autoprefixer html-minifier cssnano postcss postcss-combine-media-query gulp gulp-postcss gulp-plumber gulp-concat-css",
+		"test": "echo Привет!",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
+		"lint": "stylelint '**/*.{css,scss}'",
+		"lintfix": "stylelint '**/*.{css,scss}' --fix",
+		"check": "prettier --check './**/*.{html,css,js,jsx,scss}'",
+		"format": "prettier --write './**/*.{html,css,js,jsx,scss}'",
+		"checkAll": "npm run check && npm run lint",
+		"fixAll": "npm run format && npm run lintfix",
+		"build": "gulp build",
+		"dev": "gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SinitsaBogdan/slozhno-sosredotochitsya.git"
+	},
+	"author": "Синица Богдан",
+	"license": "ISC",
+	"homepage": "https://github.com/SinitsaBogdan/slozhno-sosredotochitsya",
+	"dependencies": {
+		"prettier": "^3.2.5"
+	},
+	"browserslist": {
+		"production": [
+			"last 2 versions",
+			"not dead",
+			"not ie <= 11",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.19",
+		"browser-sync": "^3.0.2",
+		"cssnano": "^6.1.2",
+		"del": "^6.0.0",
+		"eslint-plugin-react": "^7.33.2",
+		"gulp": "^5.0.0",
+		"gulp-concat-css": "^3.1.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^10.0.0",
+		"html-minifier": "^4.0.0",
+		"postcss": "^8.4.38",
+		"postcss-combine-media-query": "^1.0.1",
+		"styled-components": "^6.1.8"
+	}
+}
