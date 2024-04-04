@@ -1,8 +1,40 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
+	margin: 0 auto;
 	font-family: var(--global-font, sans-serif);
 	font-size: var(--global-font-size, 18px);
 	font-weight: normal;
+	max-inline-size: var(--global-width);
 	background-color: var(--color-background);
+	inline-size: minmax(100%, var(--global-width));
+}
+
+ul {
+	list-style: none;
+}
+
+button,
+a {
+	color: currentColor;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	cursor: pointer;
+}
+
+.page {
+	background-attachment: fixed;
+	background-image: url('../images/cover-image.png');
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .title {
