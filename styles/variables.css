@@ -1,16 +1,16 @@
 :root {
 	--global-width: 1024px;
-	--global-font: 'IBM Plex mono';
+	--global-font: 'IBM Plex mono', monospace;
 	--global-font-size: 18px;
 
 	--color-background: #000028;
 	--color-shadow: #ff0070;
 	--color-shadow-link: #ff0070;
 	--color-decor: #ff0070;
-	--color-decor-40: #ff007040;
+	--color-decor-hover: #ff007040;
+	--color-decor-text: #000028;
 	--color-accent: #ff0070;
 	--color-accent-title: #db00ff;
-	--color-title: #000028;
+	--color-title: #ff0070;
 	--color-text: #f1b2ce;
-	--background-image: url('../images/cover-image.png');
 }

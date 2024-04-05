@@ -3,16 +3,56 @@
 	--color-shadow: #ff0070;
 	--color-shadow-link: #ff0070;
 	--color-decor: #ff0070;
-	--color-decor-40: #ff007040;
+	--color-decor-text: #000028;
+	--color-decor-hover: #ff007040;
 	--color-accent: #ff0070;
 	--color-accent-title: #db00ff;
-	--color-title: #000028;
+	--color-title: #ff0070;
 	--color-text: #f1b2ce;
 	--background-image: url('../images/cover-image-dark.png');
 }
 
+.theme_dark .header span::after {
+	content: 'rec';
+	position: absolute;
+	color: var(--color-decor);
+	text-transform: uppercase;
+}
+
+.theme_dark .header span::before {
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+	box-shadow: 0 0 4px 2px var(--color-decor);
+	font-size: var(--global-font-size);
+	background-color: var(--color-decor);
+	block-size: 8px;
+	inline-size: 8px;
+}
+
 @media (prefers-color-scheme: dark) {
 	.page {
-		background-image: var(--background-image);
+		background-image: var(--background-image, url('../images/cover-image-dark.png'));
+	}
+
+	.header span::after {
+		content: 'REC';
+		position: absolute;
+		top: 22px;
+		right: 50px;
+		color: var(--color-decor);
+	}
+
+	.header span::before {
+		content: '';
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		border-radius: 50%;
+		box-shadow: 0 0 4px 2px var(--color-decor);
+		font-size: var(--global-font-size);
+		background-color: var(--color-decor);
+		block-size: 8px;
+		inline-size: 8px;
 	}
 }
