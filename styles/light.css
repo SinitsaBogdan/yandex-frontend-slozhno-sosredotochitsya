@@ -11,8 +11,8 @@
 	--background-image: url('../images/cover-image-light.png');
 }
 
-.page.theme_light .header .decorated_corner:first-of-type::after,
-.page.theme_light .header .decorated_corner:first-of-type::before {
+.theme_light .header span::after,
+.theme_light .header span::before {
 	display: none;
 }
 
@@ -28,6 +28,7 @@
 		--color-title: #353430;
 		--color-text: #353430;
 	}
+
 	.page {
 		background-image: var(--background-image);
 	}

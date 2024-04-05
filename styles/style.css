@@ -12,22 +12,22 @@
 .header span::after {
 	content: 'REC';
 	position: absolute;
-	right: 50px;
 	top: 22px;
+	right: 50px;
 	color: var(--color-decor);
 }
 
 .header span::before {
 	content: '';
 	position: absolute;
-	right: 30px;
 	top: 30px;
+	right: 30px;
+	border-radius: 50%;
+	box-shadow: 0 0 4px 2px var(--color-decor);
+	font-size: var(--global-font-size);
+	background-color: var(--color-decor);
 	block-size: 8px;
 	inline-size: 8px;
-	font-size: var(--global-font-size);
-	border-radius: 50%;
-	background-color: var(--color-decor);
-	box-shadow: 0 0 4px 2px var(--color-decor);
 }
 
 .decorated_corner::after {
@@ -239,13 +239,13 @@
 		line-height: 0.81;
 	}
 	.header span::after {
-		right: 40px;
 		top: 12px;
+		right: 40px;
 	}
 
 	.header span::before {
-		right: 20px;
 		top: 20px;
+		right: 20px;
 	}
 	.decorated_corner::after {
 		top: 10px;

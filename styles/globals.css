@@ -9,10 +9,10 @@
 body {
 	margin: 0 auto;
 	font-family: var(--global-font, sans-serif);
-	font-size: var(--global-font-size, 18px);
 	font-weight: normal;
-	max-inline-size: var(--global-width);
+	font-size: var(--global-font-size, 18px);
 	background-color: var(--color-background);
+	max-inline-size: var(--global-width);
 	inline-size: minmax(100%, var(--global-width));
 }
 
@@ -30,11 +30,11 @@ a {
 }
 
 .page {
-	background-attachment: fixed;
 	background-image: url('../images/cover-image.png');
-	background-position: bottom center;
 	background-repeat: no-repeat;
+	background-position: bottom center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 .title {
@@ -52,8 +52,8 @@ a {
 	display: flex;
 	flex-direction: column;
 	row-gap: 80px;
-	margin-block: 60px;
 	margin-inline: 20px;
+	margin-block: 60px;
 }
 
 .image {
@@ -87,17 +87,17 @@ a {
 .decorated_corner::after {
 	content: '';
 	position: absolute;
+	border-top: 1px solid var(--color-decor);
+	border-right: 1px solid var(--color-decor);
 	inline-size: 25px;
 	block-size: 25px;
-	border-top: 1px solid var(--color-accent);
-	border-right: 1px solid var(--color-accent);
 }
 
 .decorated_corner::before {
 	content: '';
 	position: absolute;
+	border-bottom: 1px solid var(--color-decor);
+	border-left: 1px solid var(--color-decor);
 	inline-size: 25px;
 	block-size: 25px;
-	border-bottom: 1px solid var(--color-accent);
-	border-left: 1px solid var(--color-accent);
 }
