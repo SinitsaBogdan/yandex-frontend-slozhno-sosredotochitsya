@@ -14,12 +14,12 @@
 .title {
 	color: var(--color-accent-title);
 	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-	text-shadow: 4px 4px 0 var(--color-shadow);
+	text-shadow: 4px 4px 0 var(--color-accent-title-shadow);
 }
 
 .decorated_title {
-	color: var(--color-decor-text);
-	background-color: var(--color-accent);
+	color: var(--color-title-second);
+	background-color: var(--color-accent-background);
 }
 
 .main {
@@ -39,7 +39,7 @@
 
 .link {
 	text-decoration: none;
-	text-shadow: 2px 2px 0 var(--color-shadow-link);
+	text-shadow: 2px 2px 0 var(--color-link-shadow);
 }
 
 .link:hover {
@@ -61,8 +61,8 @@
 .decorated_corner::after {
 	content: '';
 	position: absolute;
-	border-top: 1px solid var(--color-decor);
-	border-right: 1px solid var(--color-decor);
+	border-top: 1px solid var(--color-decorate);
+	border-right: 1px solid var(--color-decorate);
 	inline-size: 25px;
 	block-size: 25px;
 }
@@ -70,10 +70,32 @@
 .decorated_corner::before {
 	content: '';
 	position: absolute;
-	border-bottom: 1px solid var(--color-decor);
-	border-left: 1px solid var(--color-decor);
+	border-bottom: 1px solid var(--color-decorate);
+	border-left: 1px solid var(--color-decorate);
 	inline-size: 25px;
 	block-size: 25px;
+}
+
+.header span::after {
+	content: 'rec';
+	position: absolute;
+	top: 22px;
+	right: 50px;
+	color: var(--color-decorate);
+	text-transform: uppercase;
+}
+
+.header span::before {
+	content: '';
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	border-radius: 50%;
+	box-shadow: 0 0 4px 2px var(--color-decorate);
+	font-size: var(--global-font-size);
+	background-color: var(--color-decorate);
+	block-size: 8px;
+	inline-size: 8px;
 }
 
 .header {
@@ -86,8 +108,12 @@
 	inline-size: 100%;
 }
 
-.decorated_corner::after,
 .decorated_corner::before {
+	bottom: 20px;
+	left: 20px;
+}
+
+.decorated_corner::after {
 	top: 20px;
 	right: 20px;
 }
@@ -125,14 +151,14 @@
 	align-items: center;
 	border: 1px solid transparent;
 	padding: 1px 12px;
-	color: var(--color-decor);
+	color: var(--color-title-first);
 	font-size: inherit;
 	text-transform: lowercase;
 	background-color: transparent;
 }
 
 .header__theme-menu-button:hover {
-	border: 1px solid var(--color-decor-hover);
+	border: 1px solid var(--color-title-first-hover);
 }
 
 .header__theme-menu-button:focus {
@@ -164,6 +190,11 @@
 	gap: 20px;
 }
 
+.content_block__row {
+	display: flex;
+	flex-direction: column;
+}
+
 .content_block__row .content_block__title {
 	inline-size: 315px;
 }
@@ -174,16 +205,20 @@
 }
 
 .content_block__title {
-	margin-block-end: 20px;
-	color: var(--color-title);
+	color: var(--color-title-first);
 	font-weight: 700;
 	font-size: inherit;
 }
 
 .content_block__list_title {
 	margin-block-end: 20px;
-	color: var(--color-decor-text);
 	font-size: var(--global-font-size);
+}
+
+.article {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .article .article__text:not(:last-child) {
@@ -192,17 +227,16 @@
 
 .article__title,
 .galery__title {
-	margin-block-end: 8px;
 	font-size: var(--global-font-size);
-	line-height: 24px;
+	line-height: 22px;
 }
 
-.article__title__fw-400 {
+.article__title__fw-normal {
 	font-weight: normal;
 }
 
 .article__text {
-	color: var(--color-text);
+	color: var(--color-article-text);
 	font-size: var(--global-font-size);
 	line-height: 23.6px;
 }
@@ -210,7 +244,7 @@
 .galery__list {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 260px 315px 428px;
+	grid-template-rows: 260px 316px 432px;
 	grid-template-areas:
 		'AAA AAA BBB'
 		'CCC RRR BBB'
@@ -254,7 +288,7 @@
 	.header__theme-menu {
 		display: flex;
 		justify-content: end;
-		margin-block-start: 170px;
+		margin-block-start: 16.4vh;
 		padding-inline-end: 20px;
 		inline-size: 100%;
 	}
@@ -283,7 +317,6 @@
 
 	.content_block__row .content_block__list {
 		grid-template-columns: 1fr;
-		grid-template-rows: auto;
 	}
 
 	.content_block__row .content_block__title {
@@ -326,16 +359,6 @@
 		left: 10px;
 	}
 
-	.theme_dark .header span::after {
-		top: 12px;
-		right: 40px;
-	}
-
-	.theme_dark .header span::before {
-		top: 20px;
-		right: 20px;
-	}
-
 	.main {
 		row-gap: 7vh;
 		margin-inline: 10px;
@@ -375,10 +398,6 @@
 
 	.content_block__title {
 		margin-block-end: 0;
-	}
-
-	.content_block__row .content_block__list {
-		margin-block-start: 2.8vh;
 	}
 
 	.galery__list {

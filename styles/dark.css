@@ -1,58 +1,42 @@
 .page.theme_dark {
-	--color-background: #000028;
-	--color-shadow: #ff0070;
-	--color-shadow-link: #ff0070;
-	--color-decor: #ff0070;
-	--color-decor-text: #000028;
-	--color-decor-hover: #ff007040;
-	--color-accent: #ff0070;
-	--color-accent-title: #db00ff;
-	--color-title: #ff0070;
-	--color-text: #f1b2ce;
+	--color-fill: #000028;
+	--color-accent-first: #db00ff;
+	--color-accent-second: #ff0070;
+	--color-accent-subsidiary: #f1b2ce;
+
 	--background-image: url('../images/cover-image-dark.png');
+
+	--color-background: var(--color-fill, #000028);
+	--color-accent-title: var(--color-accent-first, #db00ff);
+	--color-accent-title-shadow: var(--color-accent-second, #ff0070);
+	--color-accent-background: var(--color-accent-second, #ff0070);
+	--color-title-first: var(--color-accent-second, #ff0070);
+	--color-title-first-hover: var(--color-accent-second-hover, #ff007040);
+	--color-title-second: var(--color-fill, #000028);
+	--color-article-text: var(--color-subsidiary-first, #f1b2ce);
+	--color-decorate: var(--color-accent-second, #ff0070);
+	--color-link-shadow: var(--color-accent-second, #ff0070);
 }
 
-.theme_dark .header span::after {
-	content: 'rec';
-	position: absolute;
-	color: var(--color-decor);
-	text-transform: uppercase;
-}
-
+.theme_dark .header span::after,
 .theme_dark .header span::before {
-	content: '';
-	position: absolute;
-	border-radius: 50%;
-	box-shadow: 0 0 4px 2px var(--color-decor);
-	font-size: var(--global-font-size);
-	background-color: var(--color-decor);
-	block-size: 8px;
-	inline-size: 8px;
+	display: block;
 }
 
 @media (prefers-color-scheme: dark) {
 	.page {
 		background-image: var(--background-image, url('../images/cover-image-dark.png'));
 	}
+}
 
+@media (width <= 600px) {
 	.header span::after {
-		content: 'REC';
-		position: absolute;
-		top: 22px;
-		right: 50px;
-		color: var(--color-decor);
+		top: 12px;
+		right: 40px;
 	}
 
 	.header span::before {
-		content: '';
-		position: absolute;
-		top: 30px;
-		right: 30px;
-		border-radius: 50%;
-		box-shadow: 0 0 4px 2px var(--color-decor);
-		font-size: var(--global-font-size);
-		background-color: var(--color-decor);
-		block-size: 8px;
-		inline-size: 8px;
+		top: 20px;
+		right: 20px;
 	}
 }

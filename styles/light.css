@@ -1,15 +1,22 @@
 .page.theme_light {
-	--color-background: #fff1f7;
-	--color-shadow: #ff0070;
-	--color-shadow-link: #ff8dcb;
-	--color-decor: #353430;
-	--color-decor-hover: #35343040;
-	--color-decor-text: #353430;
-	--color-accent: #ff8dcb;
-	--color-accent-title: #ffc2e6;
-	--color-title: #353430;
-	--color-text: #353430;
+	--color-fill: #fff1f7;
+	--color-accent-first: #ffc2e6;
+	--color-accent-second: #ff0070;
+	--color-subsidiary-first: #ff8dcb;
+	--color-subsidiary-second: #353430;
+
 	--background-image: url('../images/cover-image-light.png');
+
+	--color-background: var(--color-fill, #fff1f7);
+	--color-accent-title: var(--color-accent-first, #ffc2e6);
+	--color-accent-title-shadow: var(--color-subsidiary-first, #ff8dcb);
+	--color-accent-background: var(--color-subsidiary-first, #ff8dcb);
+	--color-title-first: var(--color-subsidiary-second, #353430);
+	--color-title-first-hover: #000;
+	--color-title-second: var(--color-subsidiary-second, #353430);
+	--color-article-text: var(--color-subsidiary-second, #353430);
+	--color-decorate: var(--color-subsidiary-second, #353430);
+	--color-link-shadow: var(--color-subsidiary-first, #ff8dcb);
 }
 
 .theme_light .header span::after,
@@ -19,19 +26,32 @@
 
 @media (prefers-color-scheme: light) {
 	:root {
-		--color-background: #fff1f7;
-		--color-shadow: #ff0070;
-		--color-shadow-link: #ff8dcb;
-		--color-decor: #353430;
-		--color-decor-hover: #35343040;
-		--color-decor-text: #000028;
-		--color-accent: #ff8dcb;
-		--color-accent-title: #ffc2e6;
-		--color-title: #353430;
-		--color-text: #353430;
+		--color-fill: #fff1f7;
+		--color-accent-first: #ffc2e6;
+		--color-accent-second: #ff0070;
+		--color-subsidiary-first: #ff8dcb;
+		--color-subsidiary-second: #353430;
+
+		--background-image: url('../images/cover-image-light.png');
+
+		--color-background: var(--color-fill, #fff1f7);
+		--color-accent-title: var(--color-accent-first, #ffc2e6);
+		--color-accent-title-shadow: var(--color-subsidiary-first, #ff8dcb);
+		--color-accent-background: var(--color-subsidiary-first, #ff8dcb);
+		--color-title-first: var(--color-subsidiary-second, #353430);
+		--color-title-first-hover: #000;
+		--color-title-second: var(--color-subsidiary-second, #353430);
+		--color-article-text: var(--color-subsidiary-second, #353430);
+		--color-decorate: var(--color-subsidiary-second, #353430);
+		--color-link-shadow: var(--color-subsidiary-first, #ff8dcb);
 	}
 
 	.page {
 		background-image: var(--background-image, url('../images/cover-image-light.png'));
+	}
+
+	.header span::after,
+	.header span::before {
+		display: none;
 	}
 }

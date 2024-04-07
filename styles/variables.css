@@ -3,14 +3,20 @@
 	--global-font: 'IBM Plex mono', monospace;
 	--global-font-size: 18px;
 
-	--color-background: #000028;
-	--color-shadow: #ff0070;
-	--color-shadow-link: #ff0070;
-	--color-decor: #ff0070;
-	--color-decor-hover: #ff007040;
-	--color-decor-text: #000028;
-	--color-accent: #ff0070;
-	--color-accent-title: #db00ff;
-	--color-title: #ff0070;
-	--color-text: #f1b2ce;
+	--color-fill: #000028;
+	--color-accent-first: #db00ff;
+	--color-accent-second: #ff0070;
+	--color-accent-second-hover: #ff007040;
+	--color-subsidiary-first: #f1b2ce;
+
+	--color-background: var(--color-fill, #000028);
+	--color-accent-title: var(--color-accent-first, #db00ff);
+	--color-accent-title-shadow: var(--color-accent-second, #ff0070);
+	--color-accent-background: var(--color-accent-second, #ff0070);
+	--color-title-first: var(--color-accent-second, #ff0070);
+	--color-title-first-hover: var(--color-accent-second-hover, #ff007040);
+	--color-title-second: var(--color-fill, #000028);
+	--color-article-text: var(--color-subsidiary-first, #f1b2ce);
+	--color-decorate: var(--color-accent-second, #ff0070);
+	--color-link-shadow: var(--color-accent-second, #ff0070);
 }
