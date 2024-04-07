@@ -2,6 +2,7 @@
 	--color-fill: #fff1f7;
 	--color-accent-first: #ffc2e6;
 	--color-accent-second: #ff0070;
+	--color-accent-second-hover: #35343040;
 	--color-subsidiary-first: #ff8dcb;
 	--color-subsidiary-second: #353430;
 
@@ -12,7 +13,7 @@
 	--color-accent-title-shadow: var(--color-subsidiary-first, #ff8dcb);
 	--color-accent-background: var(--color-subsidiary-first, #ff8dcb);
 	--color-title-first: var(--color-subsidiary-second, #353430);
-	--color-title-first-hover: #000;
+	--color-title-first-hover: var(--color-accent-second-hover, #35343040);
 	--color-title-second: var(--color-subsidiary-second, #353430);
 	--color-article-text: var(--color-subsidiary-second, #353430);
 	--color-decorate: var(--color-subsidiary-second, #353430);
@@ -29,6 +30,7 @@
 		--color-fill: #fff1f7;
 		--color-accent-first: #ffc2e6;
 		--color-accent-second: #ff0070;
+		--color-accent-second-hover: #35343040;
 		--color-subsidiary-first: #ff8dcb;
 		--color-subsidiary-second: #353430;
 
@@ -39,7 +41,7 @@
 		--color-accent-title-shadow: var(--color-subsidiary-first, #ff8dcb);
 		--color-accent-background: var(--color-subsidiary-first, #ff8dcb);
 		--color-title-first: var(--color-subsidiary-second, #353430);
-		--color-title-first-hover: #000;
+		--color-title-first-hover: var(--color-accent-second-hover, #ff007040);
 		--color-title-second: var(--color-subsidiary-second, #353430);
 		--color-article-text: var(--color-subsidiary-second, #353430);
 		--color-decorate: var(--color-subsidiary-second, #353430);
